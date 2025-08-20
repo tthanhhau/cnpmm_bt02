@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD</title>
+</head>
+<body>
+  <h1>CRUD with Sequelize</h1>
+
+  <form action="/post-crud" method="POST">
+    <p><input type="text"   name="firstName" placeholder="First name" required></p>
+    <p><input type="text"   name="lastName"  placeholder="Last name"  required></p>
+    <p><input type="email"  name="email"     placeholder="Email"      required></p>
+    <p><input type="text"   name="address"   placeholder="Address"    required></p>
+    <button type="submit">Create</button>
+  </form>
+
+  <p><a href="/get-crud">View all users</a></p>
+</body>
+</html>

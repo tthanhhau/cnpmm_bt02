@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Update User</title>
+</head>
+<body>
+  <h2>Update User</h2>
+
+  <form action="/put-crud" method="POST">
+    <input type="hidden" name="id" value="<%= user && user.id %>">
+    <p><input type="text"  name="firstName" value="<%= user && user.firstName %>" placeholder="First name" required></p>
+    <p><input type="text"  name="lastName"  value="<%= user && user.lastName  %>" placeholder="Last name"  required></p>
+    <p><input type="email" name="email"     value="<%= user && user.email     %>" placeholder="Email"      required></p>
+    <p><input type="text"  name="address"   value="<%= user && user.address   %>" placeholder="Address"    required></p>
+    <button type="submit">Save</button>
+  </form>
+
+  <p><a href="/get-crud">Back</a></p>
+</body>
+</html>

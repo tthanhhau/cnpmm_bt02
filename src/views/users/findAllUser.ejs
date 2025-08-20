@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Users</title>
+</head>
+<body>
+  <h2>User List</h2>
+
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% if (dataTable && dataTable.length > 0) { %>
+      <% dataTable.forEach(function(u){ %>
+        <tr>
+          <td><%= u.id %></td>
+          <td><%= u.firstName %></td>
+          <td><%= u.lastName %></td>
+          <td><%= u.email %></td>
+          <td><%= u.address %></td>
+          <td>
+            <a href="/edit-crud?id=<%= u.id %>">Edit</a> |
+            <a href="/delete-crud?id=<%= u.id %>" onclick="return confirm('Delete this user?')">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    <% } %>
+    </tbody>
+  </table>
+
+  <p><a href="/crud">Create new</a></p>
+</body>
+</html>
